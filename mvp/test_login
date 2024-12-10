@@ -1,0 +1,5 @@
+Admin: admin, password: admin123
+Teacher: teacher, password: teacher123
+Student: student, password: student123
+Parent: parent, password: parent123
+
