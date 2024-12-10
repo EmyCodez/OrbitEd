@@ -1,0 +1,85 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Page background color */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px; /* Ensure there's space for the fixed header */
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    background-color: #ffffff; /* Set header background same as page background */
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed position at the top */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Ensure it's above other elements */
+}
+
+/* Logo in Header */
+header .logo {
+    width: 500px; /* Increased width of the logo */
+    height: auto; /* Adjust height automatically based on width */
+}
+
+/* Login Container */
+.login-container {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 100px; /* Space below the header */
+}
+
+/* Header for Login */
+.login-container h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+input[type="text"], input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+/* Login Button */
+button {
+    width: 100%; /* Full width to match input fields */
+    padding: 12px;
+    font-size: 16px;
+    background-color: #80b3ff; /* Light blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6699cc; /* Slightly darker blue on hover */
+}
+
+
+

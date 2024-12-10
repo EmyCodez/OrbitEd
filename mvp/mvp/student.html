@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Student Dashboard</h1>
+</header>
+
+<!-- Main Content Section (Student Dashboard) -->
+<div class="dashboard-container">
+    <!-- Top Container: Buttons -->
+    <div class="top-container">
+        <!-- Buttons Section -->
+        <div class="buttons-section">
+            <button class="dashboard-button large-button">Class Timeline</button>
+            <button class="dashboard-button large-button">Student Timeline</button>
+        </div>
+        
+    </div>
+
+    <!-- Assignment Tracker Table Section -->
+    <div class="assignment-tracker">
+        <h3>Assignment Tracker</h3>
+        <table id="assignmentTable">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Assignment Name</th>
+                    <th>Priority</th>
+                    <th>Due Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic Rows will be added here -->
+            </tbody>
+        </table>
+
+        <!-- Button Section for Add and Remove -->
+        <div class="buttons-container">
+            <button class="add-assignment" onclick="addAssignment()">Add Assignment</button>
+            <button class="remove-all" onclick="removeAllAssignments()">Remove All</button>
+        </div>
+    </div>
+
+    <!-- Bottom Container: Class Notes Upload -->
+    <div class="bottom-container">
+        <h2>Class Notes</h2>
+        <p>Upload your class notes here:</p>
+        <input type="file" id="fileUpload" name="fileUpload">
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Your School. All rights reserved.</p>
+</footer>
+
+<script src="student.js"></script>
+</body>
+</html>
+
+
+
