@@ -1,0 +1,91 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Header Styles */
+header {
+    background-color: #80b3ff; /* Lighter blue for the header */
+    padding: 20px 30px;
+    text-align: left; /* Align logo to the left */
+    position: relative;
+}
+
+header .logo {
+    width: 200px; /* Increased width of logo */
+    height: 150px; /* Increased height of logo */
+}
+
+/* Main Content (Login Container) Styles */
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group button {
+    width: 100%; /* Ensures both inputs and button take up the full width of the container */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+button {
+    background-color: navy; /* Button color changed to navy blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003366; /* Darker navy blue for hover effect */
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #80b3ff; /* Lighter blue for the footer */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+

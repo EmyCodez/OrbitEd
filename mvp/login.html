@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Login Form</title>
-  <link rel="stylesheet" href="login-style.css" />
-  <!-- Font Awesome CDN link for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="wrapper">
-    <div class="title">
-      <!-- Logo in top-left corner -->
-      <img src="logo.png" alt="Logo" class="logo" />
-      <span>Login Form</span>
-    </div>
-    <form action="#">
-      <div class="row">
-        <i class="fas fa-user"></i>
-        <input type="text" placeholder="Email or Phone" required />
-      </div>
-      <div class="row">
-        <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Password" required />
-      </div>
-      <!-- Dropdown for Role Selection -->
-      <div class="row">
-        <i class="fas fa-user-tag"></i>
-        <select required>
-          <option value="" disabled selected>Select Role</option>
-          <option value="Admin">Admin</option>
-          <option value="Teacher">Teacher</option>
-          <option value="Student">Student</option>
-          <option value="Parent">Parent</option>
-        </select>
-      </div>
-      <div class="pass"><a href="#">Forgot password?</a></div>
-      <div class="row button">
-        <input type="submit" value="Login" />
-      </div>
-      <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
-    </form>
-  </div>
-  <script src="login.js"></script>
-</body>
 
+<!-- Header Section -->
+<header>
+    <img src="logo.png" alt="Logo" class="logo">
+</header>
+
+<!-- Main Content Section -->
+<div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="return handleLogin(event)">
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="input-group">
+            <button type="submit">Login</button>
+        </div>
+        <p id="errorMessage" class="error-message"></p>
+    </form>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Your Company. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
+
