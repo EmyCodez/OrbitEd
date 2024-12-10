@@ -1,0 +1,117 @@
+/* Body and general container styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+/* Header with company logo */
+header {
+  background-color: rgb(255, 255, 255);
+  /* Green background */
+  padding: 20px;
+  text-align: left;
+}
+
+header .company-logo {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+header .logo-image {
+  max-width: 400px;
+  /* Set max width for the logo */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+/* Main container styles */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.form-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#assignmentName,
+#dueDate {
+  padding: 10px;
+  margin-right: 10px;
+  width: 30%;
+}
+
+#priority {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.high {
+  background-color: #f8d7da;
+}
+
+.medium {
+  background-color: #fff3cd;
+}
+
+.low {
+  background-color: #d4edda;
+}
+
+button.delete {
+  background-color: #dc3545;
+}
+
+button.delete:hover {
+  background-color: #c82333;
+}
+
+.due-date {
+  font-style: italic;
+  color: #666;
+}

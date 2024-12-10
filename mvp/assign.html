@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header with Company Logo -->
+  <header>
+    <div class="company-logo">
+      <img src="logo.png" alt="Company Logo" class="logo-image">
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Assignment Tracker</h1>
+
+    <!-- Form to add new assignment -->
+    <div class="form-container">
+      <input type="text" id="assignmentName" placeholder="Enter Assignment Name" required>
+      <select id="priority">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <input type="date" id="dueDate" required>
+      <button onclick="addAssignment()">Add Assignment</button>
+    </div>
+
+    <!-- List of assignments -->
+    <h2>Assignments</h2>
+    <ul id="assignmentList">
+      <!-- Assignments will be listed here -->
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
