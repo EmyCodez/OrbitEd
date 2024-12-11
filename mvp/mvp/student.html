@@ -16,47 +16,108 @@
 
 <!-- Main Content Section (Student Dashboard) -->
 <div class="dashboard-container">
-    <!-- Top Container: Buttons -->
-    <div class="top-container">
+
+    <!-- Top Section: Buttons and Date -->
+    <div class="top-section">
         <!-- Buttons Section -->
         <div class="buttons-section">
             <button class="dashboard-button large-button">Class Timeline</button>
             <button class="dashboard-button large-button">Student Timeline</button>
         </div>
         
-    </div>
-
-    <!-- Assignment Tracker Table Section -->
-    <div class="assignment-tracker">
-        <h3>Assignment Tracker</h3>
-        <table id="assignmentTable">
-            <thead>
-                <tr>
-                    <th>Subject</th>
-                    <th>Assignment Name</th>
-                    <th>Priority</th>
-                    <th>Due Date</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Dynamic Rows will be added here -->
-            </tbody>
-        </table>
-
-        <!-- Button Section for Add and Remove -->
-        <div class="buttons-container">
-            <button class="add-assignment" onclick="addAssignment()">Add Assignment</button>
-            <button class="remove-all" onclick="removeAllAssignments()">Remove All</button>
+        <!-- Today's Date Below the Button -->
+        <div class="date-container">
+            <p id="todayDate" class="bold-date"></p> <!-- Date will be bold -->
         </div>
     </div>
 
-    <!-- Bottom Container: Class Notes Upload -->
-    <div class="bottom-container">
+    <!-- Middle Section: Assignment Tracker and Quiz -->
+    <div class="middle-section">
+        <!-- Assignment Tracker -->
+        <div class="assignment-tracker">
+            <h3>Assignment Tracker</h3>
+            <table id="assignmentTable">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Assignment Name</th>
+                        <th>Priority</th>
+                        <th>Due Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic Rows will be added here -->
+                </tbody>
+            </table>
+         <!-- Add Assignment and Remove All buttons -->
+<div class="buttons-container">
+    <button class="dashboard-button large-button" onclick="addAssignment()">Add Assignment</button>
+    <button class="dashboard-button large-button" onclick="removeAllAssignments()">Remove All</button>
+</div>
+
+        </div>
+
+        <!-- Editable Quiz -->
+        <div class="quiz-container">
+            <h3>Editable Quiz:</h3>
+            <form id="quizForm">
+                <div class="quiz-question">
+                    <label for="question1">1. What is the capital of France?</label>
+                    <input type="text" id="question1" name="question1" placeholder="Your answer here">
+                </div>
+
+                <div class="quiz-question">
+                    <label for="question2">2. What is 5 + 7?</label>
+                    <input type="number" id="question2" name="question2" placeholder="Your answer here">
+                </div>
+
+                <div class="quiz-question">
+                    <label for="question3">3. Which of these is a programming language?</label>
+                    <select id="question3" name="question3">
+                        <option value="Python">Python</option>
+                        <option value="English">English</option>
+                        <option value="Math">Math</option>
+                    </select>
+                </div>
+
+                <div class="quiz-question">
+                    <label>4. Select your favorite color:</label>
+                    <input type="radio" id="colorRed" name="color" value="Red">
+                    <label for="colorRed">Red</label>
+                    <input type="radio" id="colorBlue" name="color" value="Blue">
+                    <label for="colorBlue">Blue</label>
+                    <input type="radio" id="colorGreen" name="color" value="Green">
+                    <label for="colorGreen">Green</label>
+                </div>
+
+                <div class="quiz-question">
+                    <label>5. Choose all programming languages:</label>
+                    <input type="checkbox" id="checkbox1" name="languages" value="JavaScript">
+                    <label for="checkbox1">JavaScript</label>
+                    <input type="checkbox" id="checkbox2" name="languages" value="Python">
+                    <label for="checkbox2">Python</label>
+                    <input type="checkbox" id="checkbox3" name="languages" value="Spanish">
+                    <label for="checkbox3">Spanish</label>
+                </div>
+
+                <!-- Quiz Submit and Auto Correct buttons -->
+<div class="buttons-container">
+    <button class="dashboard-button large-button" onclick="submitQuiz()">Submit Quiz</button>
+    <button class="dashboard-button large-button" onclick="autoCorrect()">Correct</button>
+</div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Bottom Section: Class Notes Upload -->
+    <div class="bottom-section">
         <h2>Class Notes</h2>
         <p>Upload your class notes here:</p>
         <input type="file" id="fileUpload" name="fileUpload">
     </div>
+
 </div>
 
 <!-- Footer Section -->
@@ -65,8 +126,24 @@
 </footer>
 
 <script src="student.js"></script>
+
+<!-- JavaScript to display today's date -->
+<script>
+    // Function to get today's date in 'MM/DD/YYYY' format
+    function displayTodaysDate() {
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = today.toLocaleDateString('en-US', options);
+        document.getElementById('todayDate').textContent = `Today's Date: ${formattedDate}`;
+    }
+
+    // Call the function on page load
+    window.onload = displayTodaysDate;
+</script>
+
 </body>
 </html>
+
 
 
 
